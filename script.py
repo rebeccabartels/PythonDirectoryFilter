@@ -17,9 +17,11 @@ for root, dirs, files in os.walk("/home/riley/CY0420"):
         if file_name in os.listdir("/home/riley/CY0420"):
             print(current_file_path) 
             All_Paths.append(current_file_path)
-
-
 print("This All the Paths:" + " " + str(All_Paths))
+
+#Must clear the array after every program run 
+All_Paths = []
+print("EMPTY: " + str(All_Paths))
 
 
             
