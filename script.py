@@ -27,6 +27,9 @@ for root, dirs, files in os.walk("/home/riley/CY0420"):
             print("TARGET: " + str(current_file_path)) 
             #add the current target / current file path to the All_Paths array for storage 
             All_Paths.append(current_file_path) 
+             response = input()
+            target_dir_name = response 
+            target_dir = os.path.join(root, target_dir_name)
 #print("This All the Paths:" + " " + str(All_Paths))
 
             
