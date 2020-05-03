@@ -40,8 +40,6 @@ def keyword():
     x = raw_input("enter a filter: ")
     print "Filtered Data %s " % x
 
-
-    
     for elem in result:
         print(elem)
         if str(x) in elem and '/unsolved' not in elem:
