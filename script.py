@@ -5,9 +5,6 @@ my_list = list()
 
 def iterate():
     for root, subdirs, files in os.walk("/home/riley/CY0420"):
-    #print(root)
-    #print(subdirs)
-    #print(files)
         for file in os.listdir(root):
             filePath = root + '/' + file
             if os.path.isdir(filePath):
@@ -19,8 +16,6 @@ def iterate():
     return my_list
 
 iterate()
-
-
 
 counter_list = list(enumerate(my_list, 1))
 print(counter_list)
