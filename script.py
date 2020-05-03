@@ -20,19 +20,28 @@ def iterate():
 iterate()
 
 counter_list = list(enumerate(my_list, 1))
-print(counter_list)
+#print(counter_list)
 
 #filter function 
 #keywords 
 
 def filter():
-        for string in my_list:
-            if '/Solved/' or 'Solution' or '/solved/' or '/SOLVED/' or '/.git' in string:
-                f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
-                f.write(str(string) + "\n")
-                result.append(string)
-        return result        
+    for root, subdirs, files in os.walk("/home/riley/CY0420"):
+        for file in os.listdir(root):
+            filePath = root + '/' + file
+            if os.path.isdir(filePath):
+                result.append(filePath)
+                #print(result)
+    return result        
 
 filter()
 
-print("WORKED:     " + str(result))
+def keyword():
+    for elem in result:
+        print(elem)
+        if '/solved' in elem and '/unsolved' not in elem:
+            f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
+            f.write(str(elem) + "\n")
+
+
+keyword()
