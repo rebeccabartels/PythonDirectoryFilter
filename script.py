@@ -29,7 +29,9 @@ def filter():
     result = []
     for string in my_list:
         if '/Solved/' in string:
+            f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
+            f.write(str(string) + "\n")
             result.append(string)
-            print(string)
+            print(result)
 
 filter()
