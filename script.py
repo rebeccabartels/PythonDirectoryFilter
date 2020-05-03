@@ -37,11 +37,19 @@ def filter():
 filter()
 
 def keyword():
+    x = raw_input("enter a filter: ")
+    print "Filtered Data %s " % x
+
+
+    
     for elem in result:
         print(elem)
-        if '/solved' in elem and '/unsolved' not in elem:
+        if str(x) in elem and '/unsolved' not in elem:
             f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
             f.write(str(elem) + "\n")
 
 
 keyword()
+
+
+
