@@ -2,7 +2,7 @@ import os
 import sys
 count = 0 
 my_list = list()
-filtered_paths= list()
+result = []
 def iterate():
     for root, subdirs, files in os.walk("/home/riley/CY0420"):
         #print(subdirs)
@@ -26,12 +26,13 @@ print(counter_list)
 #keywords 
 
 def filter():
-    result = []
-    for string in my_list:
-        if '/Solved/' in string:
-            f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
-            f.write(str(string) + "\n")
-            result.append(string)
-            print(result)
+        for string in my_list:
+            if '/Solved/' or 'Solution' or '/solved/' or '/SOLVED/' or '/.git' in string:
+                f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
+                f.write(str(string) + "\n")
+                result.append(string)
+        return result        
 
 filter()
+
+print("WORKED:     " + str(result))
