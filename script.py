@@ -36,18 +36,22 @@ def filter():
 
 filter()
 
+
+keyword_list = list()
 def keyword():
     x = raw_input("enter a filter: ")
-    print "Filtered Data %s " % x
-
+    keyword_list.append(str(x))
+    #print "Filtered Data %s " % x
     for elem in result:
         print(elem)
-        if str(x) in elem and '/unsolved' not in elem:
+        if str(x) in elem and 'unsolved' not in elem and 'Unsolved' not in elem and 'UNSOLVED' not in elem and '/unsolved' not in elem and '/Unsolved' not in elem and '/UNSOLVED' not in elem:
             f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/hidden.txt", "a")
             f.write(str(elem) + "\n")
-
+            keyword_list.append(str(x))
 
 keyword()
+
+print(keyword_list)
 
 
 
