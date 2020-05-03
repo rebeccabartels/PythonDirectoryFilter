@@ -19,27 +19,28 @@ for root, dirs, files in os.walk("/home/riley/CY0420"):
         #print(files)
         #current_week = open(current_file_path, "r")
         #print("SUCCESS")
-        if file_name in os.listdir("/home/riley/CY0420"):
-            
-            #set target as current file path so that we can add it / manipulate it 
-
+        if file_name in os.listdir("/home/riley/CY0420"):  #set target as current file path so that we can add it / manipulate it 
             target_dir = current_file_path
-            print("TARGET: " + str(current_file_path)) 
+            #print("TARGET: " + str(current_file_path)) 
             #add the current target / current file path to the All_Paths array for storage 
             All_Paths.append(current_file_path) 
-             response = input()
-            target_dir_name = response 
-            target_dir = os.path.join(root, target_dir_name)
+             #Dev/CyberSecTA/Apps/Python\ Data\ Filterer/
+            f = open("/home/riley/Dev/CyberSecTA/Apps/Python Data Filterer/filter.txt", "a")
+            f.write(str(current_file_path) + "\n")
+        print(f)
+        f.close()
+            #target_dir = os.path.join(root, target_dir_name)
 #print("This All the Paths:" + " " + str(All_Paths))
 
             
 
 
 #Must clear the array after every program run 
+#print("NOT EMPTY: " + str(All_Paths))
 All_Paths = []
-print("EMPTY: " + str(All_Paths))
+#print("EMPTY: " + str(All_Paths))
 
-target_dir = current_file_path
+
 
 
 
