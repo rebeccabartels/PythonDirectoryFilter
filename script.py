@@ -2,7 +2,7 @@ import os
 import sys
 count = 0 
 my_list = list()
-
+filtered_paths= list()
 def iterate():
     for root, subdirs, files in os.walk("/home/riley/CY0420"):
         #print(subdirs)
@@ -21,3 +21,15 @@ iterate()
 
 counter_list = list(enumerate(my_list, 1))
 print(counter_list)
+
+#filter function 
+#keywords 
+
+def filter():
+    result = []
+    for string in my_list:
+        if '/Solved/' in string:
+            result.append(string)
+            print(string)
+
+filter()
