@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import os, sys
 
 
@@ -30,21 +29,8 @@ REPO_DIR = os.path.join(HOMEPATH, '/home/riley/CY0420')
 
 
 
-# replace with your homepath if you wanna test
-
-# assert REPO_DIR == '/Users/cchilders/projects/trilogy_TA_class/lesson-plans/01-Class-Content'
-
-
 
 def possibly_rename_repo(root, current_dir_name, target_dir_name):
-
-    """
-
-    Some were nested, could not automate:
-
-        We would be renaming: /blah/blah/19.4/Activities/02-Class-Components-With-Props/Unsolved/Unsolved-Easier
-
-    """
 
     fullpath =  os.path.join(root, current_dir_name)
 
