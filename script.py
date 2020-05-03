@@ -5,6 +5,8 @@ my_list = list()
 
 def iterate():
     for root, subdirs, files in os.walk("/home/riley/CY0420"):
+        #print(subdirs)
+        #print(files)
         for file in os.listdir(root):
             filePath = root + '/' + file
             if os.path.isdir(filePath):
